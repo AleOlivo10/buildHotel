@@ -1,65 +1,77 @@
-function rentRoom() {
-    var y = "Y";
-    var n = "N";
-    var readline = require('readline-sync');
-    //This is where they will be told which rooms are available if they want that is...
-    var yesOrNo = readline.question("Welcome to the Chance Hotel! We have 4 rooms avaiable. Would you like to rent one? Y/N:").toUpperCase();
-    //This is the hotel object. This has the list of rooms and amenities
-    var vacantRooms = {
-        room1: "The Classy Room",
-        room2: "The Nightmare Room",
-        room3: "The Gold room",
-        room4: "The Trashy Room",
-    };
-    var occupiedRooms = [];
-    var amenities = [
-        [" Tea Time every 2 hours", " Classical Music will be played", " You have the finest silverware", " and Ludwig van Beethoven will come into your room from time to time! "],
-        [" Freddy Kreuger will visit your dreams", " you'll be rooming with Satan", " The floor is lava", " and it hails brimstone inside at all times! "],
-        [" Literally Everything in your room is made out of gold", " Theres a gold pooping goose", " Rumpelstiltskin is spinning gold in the corner", " and it will periodically rain gold! "],
-        [" You'll be rooming with Oscar the grouch", " The floor will be covered in bile", " Your bed is a cardboard mat", " and it rains ketchup every now and then... "]
-    ];
-    //If they say y", then it will list the rooms
-    if (yesOrNo == y.toUpperCase()) {
-        var rooms = Object.keys(vacantRooms);
-        for (var singleroom of rooms) {
-            console.log(singleroom);
-        }
-        var whichRoom = readline.question("Above are our avaiable rooms. Which one would you like to rent? '1,2,3, or 4?'")
-        // If they choose room 1, then it will tell them the amenities and the remaining vacant rooms.
-        if (whichRoom == 1) {
-            occupiedRooms.push(rooms[0]);
-            delete rooms[0];
-            console.log("Congratualtions! You've chosen the 'Classy' Room! These are your amenities:" + amenities[1] + "Enjoy your stay!");
-            console.log("The rooms left available are" + rooms + ". Tell a friend to test their luck at the Chance hotel!");
-        }
-        else if (whichRoom == 2) {
-            // If they choose room 2, then it will tell them the amenities and the remaining vacant rooms.
-            occupiedRooms.push(rooms[1]);
-            delete rooms[1];
-            console.log("Congratualtions! You've chosen the 'Nightmare' Room! These are your amenities:" + amenities[2] + "Enjoy your stay!")
-            console.log("The rooms left available are" + rooms + ". Tell a friend to test their luck at the Chance hotel!");
-        }
-        else if (whichRoom == 3) {
-            // If they choose room 3, then it will tell them the amenities and the remaining vacant rooms.
-            occupiedRooms.push(rooms[2]);
-            delete rooms[2];
-            console.log("Congratualtions! You've chosen the 'Gold' Room! These are your amenities:" + amenities[3] + "Enjoy your stay!")
-            console.log("The rooms left available are" + rooms + ". Tell a friend to test their luck at the Chance hotel!");
-        }
-        else if (whichRoom == 4) {
-            // If they choose room 4, then it will tell them the amenities and the remaining vacant rooms.
-            occupiedRooms.push(rooms[3]);
-            delete rooms[3];
-            console.log("Congratualtions! You've chosen the 'Trashy' Room! These are your amenities:" + amenities[4] + "Enjoy your stay!")
-            console.log("The rooms left available are " + rooms + ". Tell a friend to test their luck at the Chance hotel!");
-        }
-    }
-    //If they say "n", then it will say thanks for coming
-    else if (yesOrNo == n.toUpperCase()) {
-        console.log("Great choice. Find someplace safer to stay... Have a great day!");
-        return;
-    }
-    return;
-}
+var Room1 = {avail:1, sqft:200, price: 300, balcony: "a balcony", view: "street view", smoking: "non-smoking"};
+var Room2 = {avail:1, sqft:250, price: 350, balcony: "no balcony", view: "street view", smoking: "non-smoking"};
+var Room3 = {avail:1, sqft:500, price: 375, balcony: "a balcony", view: "water view", smoking: "smoking"};
+var Room4 = {avail:1, sqft:750, price: 400, balcony: "no balcony", view: "water view", smoking: "non-smoking"};
 
-return rentRoom();
+var readline = require("readline-sync");
+var totrooms =Room1.avail+Room2.avail+Room3.avail+Room4.avail;
+
+if (Room1.avail>0 || Room2.avail>0 || Room3.avail>0 || Room4.avail>0){
+    var roomreq = readline.question("Would you like to book a hotel room?  We have "+totrooms+" room(s) available, Type Yes to see your room options ").toLowerCase();
+    if (roomreq=="yes" || "sure" || "yea" || "yup"){
+         var sqfeet = readline.question("What size room would you like " +Room1.sqft + "sqft, "+ Room2.sqft +"sqft, "+ Room3.sqft +"sqft, or " + Room4.sqft +"sqft? ")
+            if (sqfeet== Room1.sqft){
+                console.log("The room costs "+Room1.price+" USD.\nThe room has " +Room1.balcony+ " and a " + Room1.view+ " and is "+ Room1.smoking);
+                if (Room1.avail==0){
+                    console.log(", but the room is not available.")
+                }
+                else 
+                {
+                    var book=readline.question("Would you like to book this room? ").toLowerCase();
+                    if (book=="yes" || "sure" || "yea" || "yup"){
+                        Room1.avail=Room1.avail-1;
+                        console.log("We currently have "+ Room1.avail+ " rooms remaining at this price.")
+                    }
+                }
+            } 
+            else if(sqfeet==Room2.sqft){
+                console.log("The room costs "+Room2.price+" USD.\nThe room has " +Room2.balcony+ " and a " + Room2.view+ " and is "+ Room2.smoking);
+                if (Room2.avail==0){
+                    console.log(", but the room is not available.")
+                }
+                else 
+                {
+                    var book=readline.question("Would you like to book this room? ").toLowerCase();
+                    if (book=="yes" || "sure" || "yea" || "yup"){
+                        Room2.avail=Room2.avail-1;
+                        console.log("We currently have "+ Room2.avail+ " rooms remaining at this price.")
+                    }
+                }
+            }
+            else if(sqfeet==Room3.sqft){
+                console.log("The room costs "+Room3.price+" USD\nThe room has " +Room3.balcony+ " and a " + Room3.view+ " and is "+ Room3.smoking);
+                if (Room3.avail==0){
+                    console.log(", but the room is not available.")
+                }
+                else 
+                {
+                    var book=readline.question("Would you like to book this room? ").toLowerCase();
+                    if (book=="yes" || "sure" || "yea" || "yup"){
+                        Room3.avail=Room3.avail-1;
+                        console.log("We currently have "+ Room3.avail+ " rooms remaining at this price.")
+                    }
+                }
+            }
+            else if(sqfeet==Room4.sqft){
+                console.log("The room costs "+Room4.price+" USD\nThe room has " +Room4.balcony+ " and a " + Room4.view+ " and is "+ Room4.smoking);
+                if (Room1.avail==0){
+                    console.log(", but the room is not available.")
+                }
+                else 
+                {
+                    var book=readline.question("Would you like to book this room? ").toLowerCase();
+                    if (book=="yes" || "sure" || "yea" || "yup"){
+                        Room4.avail=Room4.avail-1;
+                        console.log("We currently have "+ Room4.avail+ " rooms remaining at this price.");
+                    }
+                }
+            }
+            else {
+                console.log("We are not the Waldof Astoria")
+            }
+    }
+
+}
+else {
+    console.log("Try the Motel 6")
+}

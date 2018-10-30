@@ -29,8 +29,12 @@ var luxHotel = {
 }
 };
 
-var yes = readline.question("Would you like to see what suites we have available? ");
+var yesProbably = readline.question("Would you like to see what suites we have available? ");
 
+if (yesProbably == "no") {
+        console.log("Yeah, this is pricey spot. Have a great day, though!");
+};
+if (yesProbably == "yes") {
 var roomArray = ["The Wedding Suite", "The Platinum Suite", "The Princess Suite", "The Diamond Suite"]
 for (var i = 0; i < roomArray.length; i++)
 console.log(roomArray[i]);
@@ -41,3 +45,4 @@ console.log("And, of course, there are our amenities: " + amenities);
 var roomChoice = readline.question("Which one of rooms would you be interested in booking? ");
 //instead of using an object with arrays inside of it, use arrays with objects inside of it
 console.log("That's a great choice, " + guest + ", " + luxHotel[roomChoice].name + " is " + luxHotel[roomChoice].price  + " per night. ");
+};
