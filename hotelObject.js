@@ -39,7 +39,7 @@ var roomArray = ["The Wedding Suite", "The Platinum Suite", "The Princess Suite"
 for (var i = 0; i < roomArray.length; i++)
 console.log(roomArray[i]);
 
-var amenities = ["HotTub", " Pool", " Gym", " Sauna", " Room-Service"];
+var amenities = ["HotTub", " Pool", " Gym", " Spa", " Sauna", " Room-Service"];
 console.log("And, of course, there are our amenities: " + amenities);
 
 var roomChoice = readline.question("Which one of rooms would you be interested in booking? ");
