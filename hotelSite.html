@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title> The LUX Hotel</title>
 
     <style>
@@ -84,9 +85,9 @@
                     <div class="card">
                         <img class="card-img-top" src="https://picsum.photos/286px180/" alt="Card image cap">
                         <div class="card-body">
-                            <h6 class="card-title">The Princess Suite</h6>
+                            <h6 class="card-title1">The Princess Suite</h6>
                                 <p class="card-text">This suite is $120 per night.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Book it Now</a>
                         </div>
                     </div>
                 </div>
@@ -94,9 +95,9 @@
                     <div class="card">
                         <img class="card-img-top" src="https://picsum.photos/286px180/" alt="Card image cap">
                         <div class="card-body">
-                            <h6 class="card-title">The Wedding Suite</h6>
+                            <h6 class="card-title2">The Wedding Suite</h6>
                                 <p class="card-text">This suite is $150 per night.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Book it Now</a>
                         </div>
                     </div>
                 </div>
@@ -104,9 +105,9 @@
                     <div class="card">
                         <img class="card-img-top" src="https://picsum.photos/286px180/" alt="Card image cap">
                         <div class="card-body">
-                            <h6 class="card-title">The Diamond Suite</h6>
+                            <h6 class="card-title3">The Diamond Suite</h6>
                                 <p class="card-text">This suite is $200 per night.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Book it Now</a>
                         </div>
                     </div>
                 </div>
@@ -114,9 +115,9 @@
                     <div class="card">
                         <img class="card-img-top" src="https://picsum.photos/286px180/" alt="Card image cap">
                         <div class="card-body">
-                            <h6 class="card-title">The Platinum Suite</h6>
+                            <h6 class="card-title4">The Platinum Suite</h6>
                                 <p class="card-text">This suite is $220 per night.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" onclick ="change()" class="btn btn-primary">Book it Now</a>
                         </div>
                     </div>
                 </div>
@@ -125,33 +126,42 @@
 
         
         <br><h4>Booking your stay at The <em>LUX</em> Hotel:</h4></br>
-            <form action style="margin-left: 170px; /action_page.php">
-            <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
-  </div>
   
             <br><p style = "margin: 10px; font: 20px">Choose a Suite:</p>
-                <select name="Availible Suites">
-    <option value="Select Suite"> Select Suite - </option>
-    <option value="The Princess Suite">The Princess Suite -- $120 </option>
-    <option value="The Wedding Suite">The Wedding Suite -- $150 </option>
-    <option value="The Diamond Suite">The Diamond Suite -- $200 </option>
-    <option value="The Platinum Suite">The Platinum Suite -- $220 </option>
+                <select id = "Availible">
+    <option id="Select Suite"> Select Suite - </option>
+    <option id="one">The Princess Suite -- $120 </option>
+    <option id="two">The Wedding Suite -- $150 </option>
+    <option id="three">The Diamond Suite -- $200 </option>
+    <option id="four">The Platinum Suite -- $220 </option>
   </select><br>
   
-  <br><div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
                 <br><br>
-                <input type="submit">
+                <button type="button" onclick="myFunction()">Continue</button>
             </form>
+
+<script>
+    
+    function myFunction() {
+        var princess = document.getElementById("one").selectedIndex;
+        var pr = document.getElementById("one").options;
+        alert("The Princess Suite" + princess[pr].index + " is " + princess[pr].text);
+    }
+    
+    function change() {
+        var platinum = document.getElementsByClassName("card-title4");
+        platinum.getElementsByClassName("card-text").innerHTML = "are you sure?";
+    }
+    
+
+    </script>
 
 </body>
 
 </html>
+
+
+
+
+
+
