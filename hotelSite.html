@@ -85,41 +85,41 @@
             </div>
             <div class="col-md-3 pb-5 d-flex justify-content-center">
                 <div class="card">
-                    <img class="card-img-top" src="http://hotelchicblog.com/wp-content/uploads/2012/09/big06bis.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="http://hotelchicblog.com/wp-content/uploads/2012/09/big06bis.jpg" alt="image of Princess Suite">
                     <div class="card-body">
                         <h6 class="card-title1">The Princess Suite</h6>
                         <p id="one" value="princess" class="card-text">This suite is $120 per night.</p>
-                        <a href="#" onclick="princess()" class="btn btn-primary">Book it Now</a>
+                        <a href="#" style="background-color: lightgrey" onclick="princess()" class="btn btn-primary">Book it Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 pb-5 d-flex justify-content-center">
                 <div class="card">
-                    <img class="card-img-top" src="http://lertloy.com/images/chambre-hotel-avec-jacuzzi-3-8-h244tels-romantiques-avec-jacuzzi-priv233-faits-pour-ton-couple-1020x678.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="http://lertloy.com/images/chambre-hotel-avec-jacuzzi-3-8-h244tels-romantiques-avec-jacuzzi-priv233-faits-pour-ton-couple-1020x678.jpg" alt="image of Wedding Suite">
                     <div class="card-body">
                         <h6 class="card-title2">The Wedding Suite</h6>
                         <p id="two" value="wedding" class="card-text">This suite is $150 per night.</p>
-                        <a href="#" onclick="wedding()" class="btn btn-primary">Book it Now</a>
+                        <a href="#" style="background-color: lightgrey" onclick="wedding()" class="btn btn-primary">Book it Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 pb-5 d-flex justify-content-center">
                 <div class="card">
-                    <img class="card-img-top" src="http://prestoncourt.co.uk/wp-content/uploads/Bell-Hotel-Sandwich-Balcony-Suite-Room-24.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="http://prestoncourt.co.uk/wp-content/uploads/Bell-Hotel-Sandwich-Balcony-Suite-Room-24.jpg" alt="image of Diamond Suite">
                     <div class="card-body">
                         <h6 class="card-title3">The Diamond Suite</h6>
                         <p id="three" value="diamond" class="card-text">This suite is $200 per night.</p>
-                        <a href="#" onclick="diamond()" class="btn btn-primary">Book it Now</a>
+                        <a href="#" style="background-color: lightgrey" onclick="diamond()" class="btn btn-primary">Book it Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 pb-5 d-flex justify-content-center">
                 <div class="card">
-                    <img class="card-img-top" src="https://shanklyhotel.com/wp-content/uploads/2017/06/2017-06-06-11.56.15-e1497352538912.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="https://shanklyhotel.com/wp-content/uploads/2017/06/2017-06-06-11.56.15-e1497352538912.jpg" alt="image of Platinum Suite">
                     <div class="card-body">
                         <h6 class="card-title4">The Platinum Suite</h6>
                         <p id="four" value="platinum" class="card-text">This suite is $220 per night.</p>
-                        <a href="#" onclick="platinum()" class="btn btn-primary">Book it Now</a>
+                        <a href="#" style="background-color: lightgrey" onclick="platinum()" class="btn btn-primary">Book it Now</a>
                     </div>
                 </div>
             </div>
@@ -131,19 +131,14 @@
     <h4 id="subtitle">Booking your stay at The <em>LUX</em> Hotel:</h4>
     </br>
 
-    <br>
-    <p style="margin: 10px; font: 20px">Choose a Suite:</p>
-    <select id="Availible">
-    <option id="Select Suite"> Select Suite - </option>
-    <option id="one">The Princess Suite -- $120 </option>
-    <option id="two">The Wedding Suite -- $150 </option>
-    <option id="three">The Diamond Suite -- $200 </option>
-    <option id="four">The Platinum Suite -- $220 </option>
-  </select><br>
-
-    <br><br>
-    <button type="button" onclick="myFunction()">Continue</button>
-
+    <!--<div>-->
+    <!--<button style="text-align: center" type="button" onclick="myFunction()">Continue</button>-->
+    <!--</div>-->
+    <div class="form-actions">
+        <center> 
+        <br><button type="button" style="background-color: lightgrey" class="btn btn-secondary btn-lg">Continue</button>
+        </center>
+    </div>
 
     <script>
         function princess() {
@@ -151,29 +146,76 @@
             please.style.color = "navy";
             please.style.fontWeight = "bold";
             document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Princess Suite"
+        
+            var off = document.getElementById("two");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("three");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("four");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
         }
 
         function wedding() {
             var prettyplease = document.getElementById("two");
             prettyplease.style.color = "navy";
-            please.style.fontWeight = "bold";
+            prettyplease.style.fontWeight = "bold";
             document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Wedding Suite"
-        }
         
+            var off = document.getElementById("one");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("three");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("four");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+        }
+
         function diamond() {
          var whyyy = document.getElementById("three");
             whyyy.style.color = "navy";
-            please.style.fontWeight = "bold";
+            whyyy.style.fontWeight = "bold";
             document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Wedding Suite"
+        
+            var off = document.getElementById("one");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("two");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("four");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
         }
 
         function platinum() {
          var something = document.getElementById("four");
             something.style.color = "navy";
-            please.style.fontWeight = "bold";
+            something.style.fontWeight = "bold";
             document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Platinum Suite"
+        
+            var off = document.getElementById("one");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("two");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
+            
+            var off = document.getElementById("three");
+            off.style.color = "grey";
+            off.style.fontWeight = "normal";
         }
-
         
     </script>
 
