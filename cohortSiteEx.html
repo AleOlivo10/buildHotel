@@ -1,196 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+!DOCTYPE html>
+<html>
 
 <head>
-
-    <title> The LUX Hotel</title>
-
-    <style>
-        body {
-            background-color: Linen;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 90px;
-            font: helvetica;
-            color: silver;
-        }
-
-        h3 {
-            text-align: center;
-            font-size: 30px;
-            font: helvetica;
-            color: darkkhaki;
-        }
-
-        h4 {
-            color: silver;
-            text-align: center;
-        }
-
-        h10 {
-            font: helvetica;
-            font-size: 25px;
-            line-height: 30px;
-            color: LightSlateGrey;
-            margin-left: 50px;
-            margin-right: 15px;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        p {
-            font-size: 15px;
-            color: lightslategrey;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Astoria</title>
+    <link href="https://fonts.googleapis.com/css?family=Allura|Raleway:100,400,700" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--<header>-->
-    <!--    <br>-->
-    <!--    <h2 id="maintitle">The <em>LUX</em> Hotel</h2>-->
-    <!--    <hr>-->
-    <!--    <h3 id="subtitle">Wisconsin's Premier LUXury Hotel and Spa</h3>-->
-    <!--    <hr>-->
-    <!--    </br>-->
-    <!--    <p style="text-align:center;"><img src="https://en.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_233/node_7886/dossier-paris-patrimoine-%7C-780x340-%7C-%C2%A9-fotolia/160387-4-fre-FR/Dossier-Paris-Patrimoine-%7C-780x340-%7C-%C2%A9-Fotolia.jpg" align="middle" alt="paris skyline"></p>-->
-    <!--    </br>-->
-    <!--    <hr>-->
-    <!--</header>-->
-    <!--<h10 id="marquee">Located squarely in the heart of Green Bay's financial district, your stay at The LUX allows you convenient access to our world-reknown shopping locales and thriving theatre community. The cosmopolitan atmosphere doesnt end there. The LUX is very-->
-    <!--    well known for our phonomenal day-spa, among the other things. Amenities offered to to guests at The Lux Hotel include </h10>-->
-    <!--<ul>-->
-    <!--    <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">In-Suite Hot tub</li>-->
-    <!--    <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">Room-Service</li>-->
-    <!--    <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">Complimentary Wifi</li>-->
-    <!--    <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">Indoor & Outdoor Pool access</li>-->
-    <!--    <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">Complimentary access to Gym & Sauna facilities</li>-->
-    <!--</ul>-->
+    <div class="container">
+        <div class="jumbotron">
+            <div>Hotel</div>
+            <div><span>Astoria</span></div>
+        </div>
 
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-12">
-                <h5 class="text-center pb-5">Available Suites at The <em><strong>LUX</strong></em> Hotel</h5>
-            </div>
-            <div class="col-md-3 pb-5 d-flex justify-content-center">
-                <div class="card">
-                    <img class="card-img-top" src="http://hotelchicblog.com/wp-content/uploads/2012/09/big06bis.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title1">The Princess Suite</h6>
-                        <p id="one" value="princess" class="card-text">This suite is $120 per night.</p>
-                        <a href="#" onclick="princess()" class="btn btn-primary">Book it Now</a>
-                    </div>
+    </div>
+    <div id="second-container">
+        <div class="room-choice">
+            <h2>Choose how you want to stay</h2>
+        </div>
+        <div id="room-container">
+            <div class="room" id="room1">
+                <div class="room-name">The Common Room</div>
+                <div class="room-image">
+                    <div class="CR"></div>
+
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy">Sleeps: 1</div>-->
+                <!--<div class="price">$60 per night</div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), common()">
+                    Book me!
+                </button>
+
                 </div>
             </div>
-            <div class="col-md-3 pb-5 d-flex justify-content-center">
-                <div class="card">
-                    <img class="card-img-top" src="http://lertloy.com/images/chambre-hotel-avec-jacuzzi-3-8-h244tels-romantiques-avec-jacuzzi-priv233-faits-pour-ton-couple-1020x678.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title2">The Wedding Suite</h6>
-                        <p id="two" value="wedding" class="card-text">This suite is $150 per night.</p>
-                        <a href="#" onclick="wedding()" class="btn btn-primary">Book it Now</a>
-                    </div>
+            <div class="room" id="room2">
+                <div class="room-name">The State Room</div>
+                <div class="room-image">
+                    <!--<img src="https://i.pinimg.com/originals/e1/81/ef/e181ef00efbc49e6cfb4e5a9168223d4.jpg" alt="">-->
+                    <div class="SR"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), state()">
+                    Book me!
+                </button>
+
                 </div>
             </div>
-            <div class="col-md-3 pb-5 d-flex justify-content-center">
-                <div class="card">
-                    <img class="card-img-top" src="http://prestoncourt.co.uk/wp-content/uploads/Bell-Hotel-Sandwich-Balcony-Suite-Room-24.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title3">The Diamond Suite</h6>
-                        <p id="three" value="diamond" class="card-text">This suite is $200 per night.</p>
-                        <a href="#" onclick="diamond()" class="btn btn-primary">Book it Now</a>
-                    </div>
+            <div class="room" id="room3">
+                <div class="room-name">The Presidential Suite</div>
+                <div class="room-image">
+                    <!--<img src="http://www.jeckels.com/imageMapper/Vancouver2008-03.jpg" alt="">-->
+                    <div class="PS"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), presidential()">
+                    Book me!
+                </button>
+
                 </div>
             </div>
-            <div class="col-md-3 pb-5 d-flex justify-content-center">
-                <div class="card">
-                    <img class="card-img-top" src="https://shanklyhotel.com/wp-content/uploads/2017/06/2017-06-06-11.56.15-e1497352538912.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title4">The Platinum Suite</h6>
-                        <p id="four" value="platinum" class="card-text">This suite is $220 per night.</p>
-                        <a href="#" onclick="platinum()" class="btn btn-primary">Book it Now</a>
-                    </div>
+            <div class="room" id="room4">
+                <div class="room-name">The Penthouse</div>
+                <div class="room-image">
+                    <!--<img src="http://www.jeckels.com/imageMapper/Vancouver2008-03.jpg" alt="">-->
+                    <div class="PH"></div>
+                </div>
+                <!--<div class="amenities">-->
+                <!--    <ul>-->
+                <!--        <li>Twin Mattress</li>-->
+                <!--        <li>No Smoking</li>-->
+                <!--        <li>Limited Wifi</li>-->
+                <!--        <li>No Hot Tub</li>-->
+                <!--    </ul> -->
+                <!--</div>-->
+                <!--<div class="occupancy"></div>-->
+                <!--<div class="price"></div>-->
+                <div class="button">
+                    <button onclick="displayRoom(), penthouse()">
+                    Book me!
+                </button>
+
                 </div>
             </div>
         </div>
-    </div><br>
+    </div>
 
 
-    <br>
-    <h4 id="subtitle">Booking your stay at The <em>LUX</em> Hotel:</h4>
-    </br>
+    <div class="container-class" id="common-container" style="display: none">
+        <div class="room-name">The Common Room</div>
+        <div class="picAndAmenities">
+            <div class="room-image flexy">
+                <div class="CR"></div>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <ul>
+                    <li><span class="important">Mattress: </span>Twin</li>
+                    <li><span class="important">Smoking: </span>N/A</li>
+                    <li><span class="important">Limited Wifi</span></li>
+                    <li><span class="important">Hot Tub: </span>N/A</li>
+                </ul>
+            </div>
+        </div>
+        <div class="priceAndOccupancy">
+            <div class="price"><span class="important">$60 </span>/night</div>
+            <div class="occupancy"><span class="important">Sleeps: </span>1</div>
+        </div>
+    </div>
+    <div class="container-class" id="state-container" style="display: none">
+        <div class="room-name">The State Room</div>
+        <div class="picAndAmenities">
+            <div class="room-image flexy">
+                <div class="SR"></div>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <ul>
+                    <li><span class="important">Mattress: </span>Queen</li>
+                    <li><span class="important">Smoking: </span>N/A</li>
+                    <li><span class="important">Unlimited Wifi</span></li>
+                    <li><span class="important">Hot Tub: </span>N/A</li>
+                </ul>
+            </div>
+        </div>
+        <div class="priceAndOccupancy">
+            <div class="price"><span class="important">$100 </span>/night</div>
+            <div class="occupancy"><span class="important">Sleeps: </span>2</div>
+        </div>
+    </div>
 
 
 
-
-
-    <script>
-        function princess() {
-            // var off = document.getElementsByClassName("card-text");
-            // off.style.color = "grey";
-            // off.style.fontWeight = "normal";
-            
-            var off = document.getElementById("two");
-            off.style.color = "grey";
-            off.style.fontWeight = "normal";
-            
-            var please = document.getElementById("one");
-            please.style.color = "navy";
-            please.style.fontWeight = "bold";
-            
-            
-            document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Princess Suite"
-        }
-
-        function wedding() {
-            // var off = document.getElementsByClassName("card-text");
-            // off.style.color = "grey";
-            // off.style.fontWeight = "normal";
-            
-            var prettyplease = document.getElementById("two");
-            prettyplease.style.color = "navy";
-            prettyplease.style.fontWeight = "bold";
-            document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Wedding Suite"
-        }
-
-        function diamond() {
-            
-            // var off = document.getElementsByClassName("card-text");
-            // off.style.color = "grey";
-            // off.style.fontWeight = "normal";
-            
-         var whyyy = document.getElementById("three");
-            whyyy.style.color = "navy";
-            whyyy.style.fontWeight = "bold";
-            document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Wedding Suite"
-        }
-
-        function platinum() {
-            
-            // var off = document.getElementsByClassName("card-text");
-            // off.style.color = "grey";
-            // off.style.fontWeight = "normal";
-            
-             var something = document.getElementById("four");
-            something.style.color = "navy";
-            something.style.fontWeight = "bold";
-            document.getElementById("subtitle").innerHTML = "Press 'continue' to book your stay in our Platinum Suite"
-        }
-                    
-                    
-    </script>
-
+    <script src="function.js"></script>
 </body>
 
 </html>

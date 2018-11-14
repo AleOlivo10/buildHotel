@@ -6,7 +6,7 @@ var luxHotel = {
     "The Wedding Suite" : {
     room: 1,
     name: "The Wedding Suite",
-    price: 120,
+    price: 150,
     available: true,
 },
     "The Platinum Suite" : {
@@ -18,7 +18,7 @@ var luxHotel = {
     "The Princess Suite" : {
     room: 3,
     name: "The Princess Suite",
-    price: 150,
+    price: 120,
     available: true,
 },
 "The Diamond Suite" : {
