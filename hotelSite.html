@@ -10,6 +10,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
     @import url('https://fonts.googleapis.com/css?family=Great+Vibes|Tangerine');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
     
         body {
             background-color: Linen;
@@ -35,13 +36,14 @@
             text-align: center;
         }
 
-        h10 {
-            font: helvetica;
-            font-size: 25px;
-            line-height: 30px;
+        #description {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 35px;
+            line-height: 25px;
             color: LightSlateGrey;
             margin-left: 50px;
-            margin-right: 15px;
+            margin-right: 50px;
+            padding: 0 30px;
         }
 
         ul {
@@ -72,7 +74,7 @@
                     <p style="font-family: raleway; text-align: center; margin: 0; color: darkkhaki">LOCAL ATTRACTIONS</p>
                 </div>
 <!--div2-->     <div class="col-sm">
-                    <img style="margin: 0;display: block; margin-left: auto; margin-right: auto;" src="LOGO" />
+                    <img style="margin: 0;display: block; margin-left: auto; margin-right: auto;" src="https://www110.lunapic.com/do-not-link-here-use-hosting-instead/15421520783948684?2861162298" />
 
                 </div>
 <!--div3-->     <div class="col-sm">
@@ -90,8 +92,8 @@
         </br>
         <hr>
     </header>
-    <h10 id="marquee">Located squarely in the heart of Green Bay's financial district, your stay at The LUX allows you convenient access to our world-reknown shopping locales and thriving theatre community. The cosmopolitan atmosphere doesnt end there. The LUX is very
-        well known for our phonomenal day-spa, among the other things. Amenities offered to to guests at The Lux Hotel include </h10>
+    <p id="description">Located squarely in the heart of Green Bay's financial district, your stay at The LUX allows you convenient access to our world-reknown shopping locales and thriving theatre community. The cosmopolitan atmosphere doesnt end there. The LUX is very
+        well known for our phonomenal day-spa, among the other things. Amenities offered to to guests at The Lux Hotel include: </p>
     <ul>
         <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">In-Suite Hot tub</li>
         <li style="color:darkkhaki;font-size: 20px;font: helvetica;margin: 30px">Room-Service</li>
@@ -103,7 +105,7 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-12">
-                <h5 class="text-center pb-5">Available Suites at The <em><strong>LUX</strong></em> Hotel</h5>
+                <h5 id="stoppoint" class="text-center pb-5">Available Suites at The <em><strong>LUX</strong></em> Hotel</h5>
             </div>
             <div class="col-md-3 pb-5 d-flex justify-content-center">
                 <div class="card">
@@ -111,7 +113,7 @@
                     <div class="card-body">
                         <h6 class="card-title1">The Princess Suite</h6>
                         <p id="one" value="princess" class="card-text">This suite is $120 per night.</p>
-                        <a href="#" style="background-color: lightgrey" onclick="princess()" class="btn btn-primary">Reserve your stay</a>
+                        <a style="background-color: lightgrey" onclick="princess()" class="btn btn-primary">Reserve your stay</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +123,7 @@
                     <div class="card-body">
                         <h6 class="card-title2">The Wedding Suite</h6>
                         <p id="two" value="wedding" class="card-text">This suite is $150 per night.</p>
-                        <a href="#" style="background-color: lightgrey" onclick="wedding()" class="btn btn-primary">Reserve your stay</a>
+                        <a href="#stoppoint" style="background-color: lightgrey" onclick="wedding()" class="btn btn-primary">Reserve your stay</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +133,7 @@
                     <div class="card-body">
                         <h6 class="card-title3">The Diamond Suite</h6>
                         <p id="three" value="diamond" class="card-text">This suite is $200 per night.</p>
-                        <a href="#" style="background-color: lightgrey" onclick="diamond()" class="btn btn-primary">Reserve your stay</a>
+                        <a href="#stoppoint" style="background-color: lightgrey" onclick="diamond()" class="btn btn-primary">Reserve your stay</a>
                     </div>
                 </div>
             </div>
