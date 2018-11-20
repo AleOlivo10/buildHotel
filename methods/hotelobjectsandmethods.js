@@ -2,8 +2,8 @@ var hotel = {
     name: "CareerDevs Hotel",
     rating: 5.0,
     roomRate: 325.00,
-    roomNumbersAvailable: ["102", "103", "104", "105", "106"],
-    roomNumbersBooked: ["101"],
+    roomNumbersAvailable: ["101", "102", "103", "104", "105", "106"],
+    roomNumbersBooked: [],
     roomType: "Queen",
     
     numberOfRoomsAvailable: function() {
@@ -25,14 +25,13 @@ var hotel = {
         if (this.numberOfRoomsAvailable() > 0) {
             //remove the booked room from roomNumbersAvailable and add it to roomNumbersBooked
              var randomRoom = this.roomNumbersAvailable[Math.floor(Math.random()*this.roomNumbersAvailable.length)]
-            //return randomAvailRoom
-            //list.splice( list.indexOf('foo"), 1 )')
             this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
            //add number to booked room
            this.roomNumbersBooked.push(randomRoom);
+           //this.roomNumbersBooked = this.roomNumbersBooked.concat(randomRoom);
            console.log(this.roomNumbersBooked)
         }
     }
 };
 
-
+//get a solution with unshift and one with concat
