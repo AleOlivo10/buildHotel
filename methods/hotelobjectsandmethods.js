@@ -20,31 +20,19 @@ var hotel = {
         return this.roomNumbersAvailable.length + this.roomNumbersBooked.length;
     },
     
-    bookRoom: function(position) {
+    bookRoom: function() {
         //only book a room if one or more are available
-        if (this.roomNumbersAvailable > 0) {
+        if (this.numberOfRoomsAvailable() > 0) {
             //remove the booked room from roomNumbersAvailable and add it to roomNumbersBooked
-            PRACTICE THIS ON YOUR OWN
-            this.roomNumbersAvailable.splice(position, 1)
-            var removedItem = this.roomNumbersAvailable.splice(position, 1)
-            this.roomNumbersBooked.push(removedItem)
-            
-        } else {
-
-        }
-            
-            
+             var randomRoom = this.roomNumbersAvailable[Math.floor(Math.random()*this.roomNumbersAvailable.length)]
+            //return randomAvailRoom
+            //list.splice( list.indexOf('foo"), 1 )')
+            this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
+           //add number to booked room
+           this.roomNumbersBooked.push(randomRoom);
+           console.log(this.roomNumbersBooked)
         }
     }
 };
 
 
-
-//sandbox below
-
-var ar = [1, 2, 3, 4, 5, 6];
-ar.pop(); // returns 6
-console.log( ar ); // [1, 2, 3, 4, 5]
-
-
-var removedPop = ar.pop()
