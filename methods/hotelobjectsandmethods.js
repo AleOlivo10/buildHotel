@@ -31,13 +31,25 @@ var hotel = {
            //add number to booked room
            //this.roomNumbersBooked.push(randomRoom);
            this.roomNumbersBooked = this.roomNumbersBooked.concat(randomRoom);
+        }
            //this.roomNumbersBooked = this.roomNumbers.splice(this.roomNumbers.indexOf(randomRoom), 1).concat(this.roomNumbersBooked);
            //this.roomNumbersBooked = this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
-           console.log(this.roomNumbersBooked);
-        }
+           return this.roomNumbersBooked;
+        },
+        
+        checkOut: function() {
+        if (this.numberOfRoomsBooked() > 0) {
+            var dirtyRoom = this.roomNumbersBooked[Math.floor(Math.random()*this.roomNumbersBooked.length)];
+            this.roomNumbersBooked.splice(this.roomNumbersBooked.indexOf(dirtyRoom), 1);
+            this.roomNumbersAvailable = this.roomNumbersAvailable.concat(dirtyRoom);
+            return roomNumbersAvailable;
+        }    
     }
 };
 
 //Math.floor
 //couldnt make this work. it takes a room out of this.roomNumbersAvailable and seems to insert a position into this.roomNumbersBooked
 //but it doesnt insert the actual string and then it wont let me use the bookRoom() method more than once
+
+
+//weekend HW: AVAILABLE ROOM -> CLEANINGING ROOM ->
