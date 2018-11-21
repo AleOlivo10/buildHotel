@@ -3,6 +3,7 @@ var hotel = {
     rating: 5.0,
     roomRate: 325.00,
     roomNumbersAvailable: ["101", "102", "103", "104", "105", "106"],
+    gettingCleaned: [],
     roomNumbersBooked: [],
     roomType: "Queen",
     
@@ -37,13 +38,14 @@ var hotel = {
            return this.roomNumbersBooked;
         },
         
-        checkOut: function() {
-        if (this.numberOfRoomsBooked() > 0) {
+        housekeeping: function() {
+        if (this.roomNumbersBooked > 0) {
             var dirtyRoom = this.roomNumbersBooked[Math.floor(Math.random()*this.roomNumbersBooked.length)];
             this.roomNumbersBooked.splice(this.roomNumbersBooked.indexOf(dirtyRoom), 1);
-            this.roomNumbersAvailable = this.roomNumbersAvailable.concat(dirtyRoom);
-            return roomNumbersAvailable;
-        }    
+            this.gettingCleaned = this.gettingCleaned.concat(dirtyRoom);
+            
+        }
+        return this.gettingCleaned;
     }
 };
 
