@@ -35,23 +35,30 @@ var hotel = {
         }
            //this.roomNumbersBooked = this.roomNumbers.splice(this.roomNumbers.indexOf(randomRoom), 1).concat(this.roomNumbersBooked);
            //this.roomNumbersBooked = this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
-           return this.roomNumbersBooked;
+           console.log("Rooms booked:", this.roomNumbersBooked);
         },
         
-        housekeeping: function() {
-        if (this.roomNumbersBooked > 0) {
+        checkOut: function() {
+        if (this.numberOfRoomsBooked() > 0) {
+            //if there are zero rooms booked, the function cant run and send any rooms to get cleaned
             var dirtyRoom = this.roomNumbersBooked[Math.floor(Math.random()*this.roomNumbersBooked.length)];
             this.roomNumbersBooked.splice(this.roomNumbersBooked.indexOf(dirtyRoom), 1);
             this.gettingCleaned = this.gettingCleaned.concat(dirtyRoom);
-            
+            //this function checks guests out and moves the room from 'booked' to 'getting cleaned' to make it available again later
+        }    
+        console.log("Checked out:", this.gettingCleaned, "and calling housekeeping!");
+    },
+    
+        housekeeping: function() {
+        if (this.gettingCleaned > 0) {
+            var cleanRoom = this.gettingCleaned[Math.floor(Math.random()*this.gettingCleaned.length)];
+            this.gettingCleaned.splice(this.gettingCleaned.indexOf(cleanRoom), 1);
+            this.roomNumbersAvailable = this.roomNumbersAvailable.concat(cleanRoom);
         }
-        return this.gettingCleaned;
-    }
+        console.log("All clean! Available rooms:", this.roomNumbersAvailable);
+        }
 };
 
-//Math.floor
-//couldnt make this work. it takes a room out of this.roomNumbersAvailable and seems to insert a position into this.roomNumbersBooked
-//but it doesnt insert the actual string and then it wont let me use the bookRoom() method more than once
 
 
-//weekend HW: AVAILABLE ROOM -> CLEANINGING ROOM ->
+//further hw: individualize each room. is "101" clean: true ??
