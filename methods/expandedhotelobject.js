@@ -5,8 +5,32 @@ var hotel = {
     gettingCleaned: [],
     roomNumbersBooked: [],
     roomType: "Queen",
-    roomNumbersAvailable: ["101", "102", "103", "104", "105", "106"],
-    
+    roomNumbersAvailable: {
+        room101: {
+        name: "Room 101",
+        clean: true,
+    },
+        room102: {
+        name: "Room 102",
+        clean: true,
+    },
+        room103: {
+        name: "Room 103",
+        clean: true,
+    },
+        room104: {
+        name: "Room 104",
+        clean: true,
+    },
+        room105: {
+        name: "Room 105",
+        clean: true,
+    },
+        room106: {
+        name: "Room 106",
+        clean: true,
+    },
+
     numberOfRoomsAvailable: function() {
         //length of the number of rooms available
         return this.roomNumbersAvailable.length;
@@ -57,6 +81,7 @@ var hotel = {
         }
         console.log("All clean! Available rooms:", this.roomNumbersAvailable);
         }
+}
 };
 
 
