@@ -32,10 +32,13 @@ var hotel = {
            //add number to booked room
            //this.roomNumbersBooked.push(randomRoom);
            this.roomNumbersBooked = this.roomNumbersBooked.concat(randomRoom);
-        }
+    
            //this.roomNumbersBooked = this.roomNumbers.splice(this.roomNumbers.indexOf(randomRoom), 1).concat(this.roomNumbersBooked);
            //this.roomNumbersBooked = this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
            console.log("Rooms booked:", this.roomNumbersBooked);
+        } else {
+            console.log("No more rooms available, sorry!");
+        }
         },
         
         checkOut: function() {
@@ -45,8 +48,10 @@ var hotel = {
             this.roomNumbersBooked.splice(this.roomNumbersBooked.indexOf(dirtyRoom), 1);
             this.gettingCleaned = this.gettingCleaned.concat(dirtyRoom);
             //this function checks guests out and moves the room from 'booked' to 'getting cleaned' to make it available again later
-        }    
         console.log("Checked out:", this.gettingCleaned, "and calling housekeeping!");
+        } else {
+            console.log("There's no room booked, silly, we cant check anyone out!");
+        }
     },
     
         housekeeping: function() {
@@ -54,11 +59,14 @@ var hotel = {
             var cleanRoom = this.gettingCleaned[Math.floor(Math.random()*this.gettingCleaned.length)];
             this.gettingCleaned.splice(this.gettingCleaned.indexOf(cleanRoom), 1);
             this.roomNumbersAvailable = this.roomNumbersAvailable.concat(cleanRoom);
-        }
+        
         console.log("All clean! Available rooms:", this.roomNumbersAvailable);
+        } else {
+            console.log("All rooms are clean, no need for housekeeping.");
+        }
         }
 };
 
 
 
-//further hw: individualize each room. is "101" clean: true ??
+//further hw: individualize each room. is "101" clean: true
