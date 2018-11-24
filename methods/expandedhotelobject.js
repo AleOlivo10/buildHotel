@@ -87,3 +87,4 @@ var hotel = {
 
 
 //further hw: individualize each room. is "101" clean: true ??
+//look up what others are up to and find out how to access the properties in an object thats inside of another object
