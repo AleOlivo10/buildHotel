@@ -30,6 +30,7 @@ var hotel = {
             //this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
             this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(randomRoom), 1);
            //add number to booked room
+           //math.floor rounds down to nearest integer
            //this.roomNumbersBooked.push(randomRoom);
            this.roomNumbersBooked = this.roomNumbersBooked.concat(randomRoom);
     
